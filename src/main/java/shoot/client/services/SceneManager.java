@@ -4,7 +4,7 @@ package shoot.client.services;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
-import shoot.client.controllers.Controller;
+import shoot.client.gui.controllers.Controller;
 
 
 import java.io.IOException;

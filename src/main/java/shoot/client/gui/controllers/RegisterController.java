@@ -1,4 +1,4 @@
-package shoot.client.controllers;
+package shoot.client.gui.controllers;
 
 public class RegisterController implements Controller {
 

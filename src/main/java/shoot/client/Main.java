@@ -4,7 +4,7 @@ import javafx.application.Application;
 import javafx.scene.Scene;
 import javafx.scene.layout.Pane;
 import javafx.stage.Stage;
-import shoot.client.controllers.RegisterController;
+import shoot.client.gui.controllers.RegisterController;
 import shoot.client.net.Client;
 import shoot.client.services.SceneManager;
 

@@ -1,5 +1,7 @@
 package shoot.server.net;
 
+import shoot.server.EventBus;
+import shoot.server.events.UserRegistration;
 import shoot.server.models.User;
 
 import java.io.BufferedReader;
@@ -46,15 +48,10 @@ public class Connection extends Thread {
                     return;
                 }
 
-                for (Connection connection : connections.values()) {
-                    if (!connection.id.equals(id)) {
-                        connection.printStream.println(line);
-                    }
+                if(line.startsWith("register")){
+                    EventBus.get().emit(UserRegistration.fromString(line));
                 }
 
-
-
-                System.out.println(line);
 
 
             } catch (IOException e) {
