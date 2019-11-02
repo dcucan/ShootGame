@@ -1,5 +1,8 @@
 .idea/
+.settings/
 out/
 target/
 database.sqlite
 shootGame.iml
+.classpath
+.project
