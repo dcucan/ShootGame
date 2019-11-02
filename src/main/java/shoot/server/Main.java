@@ -1,6 +1,9 @@
 package shoot.server;
 
 import jeda00.db.Migrations;
+import shoot.server.net.Server;
+
+import java.io.IOException;
 
 public class Main {
 
@@ -8,6 +11,12 @@ public class Main {
         Migrations migrations = new Migrations(Database.getConnection());
         migrations.runMigrations();
 
-        System.out.println("Hello, Server!");
+        Server server = null;
+        try {
+            server = new Server(8080);
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+        server.start();
     }
 }
