@@ -8,19 +8,20 @@
 
 <Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/10.0.1" xmlns:fx="http://javafx.com/fxml/1">
    <children>
-      <Text layoutX="61.0" layoutY="56.0" strokeType="OUTSIDE" strokeWidth="0.0" text="New User" wrappingWidth="189.5791015625">
+      <Text layoutX="205.0" layoutY="61.0" strokeType="OUTSIDE" strokeWidth="0.0" text="New User" wrappingWidth="189.5791015625">
          <font>
             <Font size="34.0" />
          </font>
       </Text>
-      <Text layoutX="70.0" layoutY="106.0" strokeType="OUTSIDE" strokeWidth="0.0" text="First Name" />
-      <Text layoutX="71.0" layoutY="155.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Last Name" />
-      <Text layoutX="71.0" layoutY="205.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Email" />
-      <Text layoutX="73.0" layoutY="253.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Password" />
-      <TextField fx:id="first_name" layoutX="70.0" layoutY="110.0" />
-      <TextField fx:id="last_name" layoutX="70.0" layoutY="159.0" />
-      <TextField fx:id="email" layoutX="73.0" layoutY="209.0" />
-      <TextField fx:id="password" layoutX="73.0" layoutY="257.0" />
-      <Button layoutX="124.0" layoutY="319.0" mnemonicParsing="false" onAction="#onConfirm" text="Confirm" />
+      <Text layoutX="191.0" layoutY="106.0" strokeType="OUTSIDE" strokeWidth="0.0" text="First Name" />
+      <Text layoutX="191.0" layoutY="156.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Last Name" />
+      <Text layoutX="189.0" layoutY="205.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Email" />
+      <Text layoutX="192.0" layoutY="257.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Password" />
+      <TextField fx:id="first_name" layoutX="191.0" layoutY="110.0" />
+      <TextField fx:id="last_name" layoutX="191.0" layoutY="159.0" />
+      <TextField fx:id="email" layoutX="191.0" layoutY="209.0" />
+      <TextField fx:id="password" layoutX="191.0" layoutY="260.0" />
+      <Button layoutX="241.0" layoutY="321.0" mnemonicParsing="false" onAction="#onConfirm" text="Confirm" />
+      <Button layoutX="36.0" layoutY="35.0" mnemonicParsing="false" onAction="#onBackToLogin" text="Back to login" />
    </children>
 </Pane>

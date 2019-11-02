@@ -4,12 +4,11 @@ import javafx.fxml.FXML;
 import javafx.scene.control.Alert;
 import javafx.scene.control.TextField;
 import shoot.client.net.Client;
+import shoot.client.services.SceneManager;
 import shoot.client.util.Password;
-import shoot.common.EventBus;
-import shoot.server.events.UserRegistration;
 import shoot.server.models.User;
 
-import javax.jws.soap.SOAPBinding;
+import java.io.IOException;
 
 
 public class RegisterController implements Controller {
@@ -104,6 +103,11 @@ public class RegisterController implements Controller {
         last_name.clear();
         email.clear();
         password.clear();
+    }
+
+    public void onBackToLogin() throws IOException {
+
+        SceneManager.get().activate("login");
     }
 
 }
