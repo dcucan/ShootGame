@@ -19,5 +19,6 @@
       <TextField fx:id="email" layoutX="172.0" layoutY="126.0" />
       <TextField fx:id="password" layoutX="172.0" layoutY="187.0" />
       <Button layoutX="226.0" layoutY="256.0" mnemonicParsing="false" onAction="#onConfirm" text="Confirm" />
+      <Button layoutX="25.0" layoutY="27.0" mnemonicParsing="false" onAction="#onRegister" text="Register" />
    </children>
 </Pane>

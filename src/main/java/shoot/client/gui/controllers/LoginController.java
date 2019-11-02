@@ -4,10 +4,11 @@ import javafx.fxml.FXML;
 import javafx.scene.control.Alert;
 import javafx.scene.control.TextField;
 import shoot.client.services.Auth;
+import shoot.client.services.SceneManager;
 import shoot.client.util.Password;
 import shoot.server.models.User;
 
-import javax.xml.soap.Text;
+import java.io.IOException;
 
 public class LoginController implements Controller {
     @Override
@@ -23,15 +24,11 @@ public class LoginController implements Controller {
     @FXML
     private TextField password;
 
-
-
-    public void onConfirm(){
-
+    public void onConfirm() {
 
         User user;
 
-
-        if(User.query().where("email",email.getText()).get().isEmpty()){
+        if (User.query().where("email", email.getText()).get().isEmpty()) {
             Alert alert = new Alert(Alert.AlertType.ERROR);
             alert.setTitle("Error");
             alert.setHeaderText("Forgot your password?");
@@ -39,11 +36,11 @@ public class LoginController implements Controller {
             alert.showAndWait();
             return;
         } else {
-            user = User.query().where("email",email.getText()).first();
+            user = User.query().where("email", email.getText()).first();
         }
 
 
-        if (Password.checkPassword(password.getText(), user.getPassword())){
+        if (Password.checkPassword(password.getText(), user.getPassword())) {
             Auth.get().setUser(user);
             Alert alert = new Alert(Alert.AlertType.INFORMATION);
             alert.setTitle("Success");
@@ -58,6 +55,12 @@ public class LoginController implements Controller {
             alert.showAndWait();
             return;
         }
+
+    }
+
+    public void onRegister() throws IOException {
+        System.out.println("test");
+        SceneManager.get().activate("register");
 
     }
 }
