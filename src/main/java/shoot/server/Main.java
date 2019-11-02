@@ -1,6 +1,7 @@
 package shoot.server;
 
 import jeda00.db.Migrations;
+import shoot.common.EventBus;
 import shoot.server.handlers.RegisterUser;
 import shoot.server.events.UserRegistration;
 import shoot.server.net.Server;

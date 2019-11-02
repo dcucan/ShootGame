@@ -1,8 +1,7 @@
 package shoot.server.net;
 
-import shoot.server.EventBus;
+import shoot.common.EventBus;
 import shoot.server.events.UserRegistration;
-import shoot.server.models.User;
 
 import java.io.BufferedReader;
 import java.io.IOException;

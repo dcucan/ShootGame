@@ -10,29 +10,15 @@ import shoot.client.services.SceneManager;
 
 import java.io.IOException;
 
+
 public class Main extends Application {
-    public static void main(String[] args) {
 
 
-
-        Client client = null;
-        try {
-            client = new Client("localhost", 8080);
-        } catch (IOException e) {
-            e.printStackTrace();
-        }
-        client.start();
-
-
-        launch(args);
-
-
-
-
-    }
 
     @Override
     public void start(Stage primaryStage) throws Exception {
+        Client.get().start();
+
         Scene scene = new Scene(new Pane());
         SceneManager.get().setScene(scene);
         SceneManager.get().newScreen("register", "gui/fxml/newUser.fxml", new RegisterController());

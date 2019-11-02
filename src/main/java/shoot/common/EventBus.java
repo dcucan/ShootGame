@@ -1,4 +1,4 @@
-package shoot.server;
+package shoot.common;
 
 import jeda00.eventbus.DefaultEventBus;
 
