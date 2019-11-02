@@ -9,6 +9,8 @@ public class RegisterUser {
         User user = new User();
         user.setFirstName(userRegistration.firstName);
         user.setLastName(userRegistration.lastName);
+        user.setEmail(userRegistration.email);
+        user.setPassword(userRegistration.password);
         user.save();
     }
 }

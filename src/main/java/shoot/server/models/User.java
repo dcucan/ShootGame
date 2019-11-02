@@ -12,12 +12,24 @@ public class User extends Model<Integer> {
         setString("last_name", lastName);
     }
 
+    public void setEmail(String email){ setString("email", email);}
+
+    public void setPassword(String password){ setString("password", password);}
+
     public String getFirstName() {
         return getString("first_name");
     }
 
     public String getLastName() {
         return getString("last_name");
+    }
+
+    public String getPassword() {
+        return getString("password");
+    }
+
+    public String getEmail() {
+        return getString("email");
     }
 
 
